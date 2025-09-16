@@ -15,7 +15,7 @@ pipeline {
         stage('Push') {
             steps {
                 script {
-                    withDockerRegistry(credentialsId: 'dockers') {
+                    withDockerRegistry(credentialsId: 'docker') {
                         sh 'docker push chinnipspk000/paytm:movie'
                     }
                 }
